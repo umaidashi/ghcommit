@@ -3,7 +3,6 @@
 import { cli } from "cleye";
 import { version } from "../package.json";
 import { checkCommandIsInstalled, checkGhCopilotIsInstalled } from "./utils";
-import { template } from "./template";
 import { ghcmdExplain } from "./ghcmd";
 
 export const CLI = cli(
@@ -26,6 +25,6 @@ export const CLI = cli(
 
     const test = await ghcmdExplain();
 
-    console.log(JSON.stringify(test, null, " "));
+    test.forEach((t, i) => console.log(`${i + 1}. ${t}`));
   },
 );
