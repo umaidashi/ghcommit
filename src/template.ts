@@ -1,5 +1,5 @@
 export const template = `
-Please suggest 10 commit messages, given the following diff:
+Please suggest 5 commit messages, given the following diff:
 
 \`\`\`diff
 {{diff}}
@@ -44,9 +44,9 @@ test: ensure Tayne retains clothing
 # Notes
 you have to be creative and think about the best commit message that can describe the changes in the diff. like if you have a diff that changes the color of a button from red to blue, you can write a commit message like this: style(button): change button color from red to blue. Moreover, you have pick simple words easy to understand.  
 
-Keep in mind you will suggest 10 commit messages. Only 1 will be used. It's better to push yourself (esp to synthesize to a higher level) and maybe wrong about some of the 10 commits because only one needs to be good. I'm looking for your best commit, not the best average commit. It's better to cover more scenarios than include a lot of overlap.
+Keep in mind you will suggest 5 commit messages. Only 1 will be used. It's better to push yourself (esp to synthesize to a higher level) and maybe wrong about some of the 5 commits because only one needs to be good. I'm looking for your best commit, not the best average commit. It's better to cover more scenarios than include a lot of overlap.
 
-Write your 10 commit messages below, in the format json list format below:
+Write your 5 commit messages below, in the format json list format below:
 [
     "commitMessage1",
     "commitMessage2",
