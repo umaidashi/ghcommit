@@ -1,5 +1,6 @@
 {
   "name": "@umaidashi/ghcommit",
+  "version": "0.0.1",
   "bin": {
     "ghcommit": "./dist/index.js"
   },
@@ -29,6 +30,8 @@
     "release": "bumpp && npm publish",
     "lint": "biome check src",
     "lint:fix": "biome format src --write"
+  },
+  "dependencies": {
+    "cleye": "^1.3.2"
   }
 }
-
