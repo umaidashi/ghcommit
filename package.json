@@ -1,8 +1,27 @@
 {
   "name": "@umaidashi/ghcommit",
-  "version": "0.0.2",
   "description": "cli app",
+  "version": "0.0.3",
+  "author": "umaidashi <umaidashi18@gmail.com>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umaidashi/ghcommit.git"
+  },
   "main": " dist/index.js",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "latest",
+    "bumpp": "^9.7.1",
+    "bun-plugin-dts": "^0.2.4",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.6.3"
+  },
+  "bin": {
+    "ghcommit": "dist/index.js"
+  },
   "scripts": {
     "start": "bun run src/index.ts",
     "build": "bun run build.mjs",
@@ -15,22 +34,9 @@
     "dist"
   ],
   "type": "module",
-  "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@types/bun": "latest",
-    "bumpp": "^9.7.1",
-    "bun-plugin-dts": "^0.2.4",
-    "dotenv": "^16.4.5",
-    "typescript": "^5.6.3"
-  },
   "engines": {
     "bun": "^1.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/umaidashi/ghcommit.git"
-  },
-  "author": "umaidashi <umaidashi18@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/umaidashi/ghcommit/issues"
