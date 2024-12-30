@@ -1,7 +1,7 @@
 {
   "name": "@umaidashi/ghcommit",
   "description": "cli app",
-  "version": "0.0.4-beta.3",
+  "version": "0.0.4",
   "author": "umaidashi <umaidashi18@gmail.com>",
   "publishConfig": {
     "access": "public"
