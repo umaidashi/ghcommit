@@ -12,9 +12,5 @@ export const ghcmdExplain = async () => {
     .filter((line) => line.startsWith('"') && line.endsWith('",'))
     .map((line) => line.slice(1, -2));
 
-  const response = {
-    commitMessages,
-  };
-
-  return response;
+  return commitMessages;
 };
