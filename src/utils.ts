@@ -1,5 +1,11 @@
 import { $ } from "bun";
 
+export const checkExistStagedDiff = async (): Promise<boolean> => {
+  const diff = await $`git diff --staged`.text();
+
+  return diff.length > 0;
+};
+
 export const checkCommandIsInstalled = async (
   command: string,
 ): Promise<boolean> => {

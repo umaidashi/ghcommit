@@ -2,18 +2,25 @@
 
 import { cli } from "cleye";
 import { version } from "../package.json";
-import { checkCommandIsInstalled, checkGhCopilotIsInstalled } from "./utils";
+import {
+  checkCommandIsInstalled,
+  checkExistStagedDiff,
+  checkGhCopilotIsInstalled,
+} from "./utils";
 import { ghcmdExplain } from "./ghcmd";
 
 export const CLI = cli(
   {
     name: "ghcommit",
     version,
-    //flags: {
-    //  template: String,
-    //},
   },
   async () => {
+    const isExistStagedDiff = await checkExistStagedDiff();
+    if (!isExistStagedDiff) {
+      console.error("There is no staged diff.");
+      return;
+    }
+
     const isInstalledGh = await checkCommandIsInstalled("gh");
     if (!isInstalledGh) {
       console.error("gh is not installed.");
@@ -25,6 +32,6 @@ export const CLI = cli(
 
     const test = await ghcmdExplain();
 
-    test.forEach((t, i) => console.log(`${i + 1}. ${t}`));
+    test.forEach((t) => console.log(t));
   },
 );
