@@ -1,5 +1,7 @@
 # ghcommit
 
+<img width="1732" alt="スクリーンショット 2024-12-31 23 20 07" src="https://github.com/user-attachments/assets/a7c81e1f-bdc9-42a1-80a9-cbab5e18b371" />
+
 ## usage
 
 this creates a menu of commit messages based on the diff between the current branch and master.
